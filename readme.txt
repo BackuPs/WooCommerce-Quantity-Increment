@@ -48,6 +48,10 @@ This will dequeue the plugin’s stylesheet.
 
 == Changelog ==
 
+22-10-2023
+* Update to support the new woo single product setting  "Limit purchases to 1 item per order"
+* Update to support changing product items in the cart.
+
 = 1.1.0 =
 * Updated to work with the WooCommerce 2.6 cart ajax script.
 
