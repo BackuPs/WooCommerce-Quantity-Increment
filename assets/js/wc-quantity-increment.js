@@ -12,12 +12,26 @@ jQuery( function( $ ) {
 	}
 
 	function wcqi_refresh_quantity_increments(){
-		$( 'div.quantity:not(.buttons_added), td.quantity:not(.buttons_added)' ).addClass( 'buttons_added' ).append( '<input type="button" value="+" class="plus" />' ).prepend( '<input type="button" value="-" class="minus" />' );
+		$('div.quantity input[id^=quantity_].qty, td.quantity input[id^=quantity_].qty').each(function() {
+			var parent = $(this).parent('div.quantity, td.quantity');
+			if (typeof parent!=undefined && !parent.hasClass('.buttons_added')) {
+				var type=$(this).attr('type');
+				if (typeof type!=undefined && type!== 'hidden') {
+					if (!parent.hasClass('.buttons_added')) {
+					  parent.addClass( 'buttons_added' ).append( '<input type="button" value="+" class="plus" />' ).prepend( '<input type="button" value="-" class="minus" />');
+					}
+				}
+			}
+		});
 	}
 
 	$( document ).on( 'updated_wc_div', function() {
 		wcqi_refresh_quantity_increments();
 	} );
+
+	$( document ).on( 'cart_page_refreshed', function() {
+		wcqi_refresh_quantity_increments();
+	});
 
 	$( document ).on( 'click', '.plus, .minus', function() {
 		// Get values
