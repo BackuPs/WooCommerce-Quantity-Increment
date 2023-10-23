@@ -1,5 +1,4 @@
-/*! Champion Woocommerce Quitity Spinners JS version 1.20
- * Copyright (c) 2015-2023 Lyon Holding Limited O/A www.thethemebuilders.com */
+/*! Woocommerce Quitity Spinners JS version 1.20 */
 
 jQuery( function( $ ) {
 
