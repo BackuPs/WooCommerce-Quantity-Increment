@@ -1,9 +1,9 @@
 === Plugin Name ===
 Contributors: automattic, woothemes
 Tags: woocommerce, quantity, quantity increment, quantity buttons, spinner
-Requires at least: 4.1
-Tested up to: 4.5
-Stable tag: 1.1.0
+Requires at least: 7.3.0
+Tested up to: 8.2.1
+Stable tag: 1.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -48,7 +48,7 @@ This will dequeue the plugin’s stylesheet.
 
 == Changelog ==
 
-22-10-2023
+= 1.2.0 23-10-2023 =
 * Update to support the new woo single product setting  "Limit purchases to 1 item per order"
 * Update to support changing product items in the cart.
 
