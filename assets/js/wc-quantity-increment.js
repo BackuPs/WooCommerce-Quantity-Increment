@@ -1,3 +1,6 @@
+/*! Champion Woocommerce Quitity Spinners JS version 1.20
+ * Copyright (c) 2015-2023 Lyon Holding Limited O/A www.thethemebuilders.com */
+
 jQuery( function( $ ) {
 
 	if ( ! String.prototype.getDecimals ) {
@@ -16,13 +19,14 @@ jQuery( function( $ ) {
 			var parent = $(this).parent('div.quantity, td.quantity');
 			if (typeof parent!=undefined && !parent.hasClass('.buttons_added')) {
 				var type=$(this).attr('type');
-				if (typeof type!=undefined && type!== 'hidden') {
+				if (typeof type!==undefined && type!== 'hidden' || typeof type===undefined) {
 					if (!parent.hasClass('.buttons_added')) {
 					  parent.addClass( 'buttons_added' ).append( '<input type="button" value="+" class="plus" />' ).prepend( '<input type="button" value="-" class="minus" />');
 					}
 				}
 			}
 		});
+		// $( 'div.quantity:not(.buttons_added), td.quantity:not(.buttons_added)' ).addClass( 'buttons_added' ).append( '<input type="button" value="+" class="plus" />' ).prepend( '<input type="button" value="-" class="minus" />' );
 	}
 
 	$( document ).on( 'updated_wc_div', function() {
