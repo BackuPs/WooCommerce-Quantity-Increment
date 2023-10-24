@@ -18,7 +18,7 @@ jQuery( function( $ ) {
 			var parent = $(this).parent('div.quantity, td.quantity');
 			if (typeof parent!=undefined && !parent.hasClass('.buttons_added')) {
 				var type=$(this).attr('type');
-				if (typeof type!==undefined && type!== 'hidden' || typeof type===undefined) {
+				if (typeof type!=="undefined" && type!== 'hidden' || typeof type==="undefined") {
 					if (!parent.hasClass('.buttons_added')) {
 					  parent.addClass( 'buttons_added' ).append( '<input type="button" value="+" class="plus" />' ).prepend( '<input type="button" value="-" class="minus" />');
 					}
