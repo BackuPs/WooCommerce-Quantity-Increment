@@ -25,7 +25,6 @@ jQuery( function( $ ) {
 				}
 			}
 		});
-		// $( 'div.quantity:not(.buttons_added), td.quantity:not(.buttons_added)' ).addClass( 'buttons_added' ).append( '<input type="button" value="+" class="plus" />' ).prepend( '<input type="button" value="-" class="minus" />' );
 	}
 
 	$( document ).on( 'updated_wc_div', function() {
